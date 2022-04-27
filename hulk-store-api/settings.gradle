@@ -1,0 +1,5 @@
+rootProject.name = 'hulk-store-api'
+
+include ':hulk-store-api-products'
+include ':hulk-store-api-security'
+include ':hulk-store-api-shopping-cart'

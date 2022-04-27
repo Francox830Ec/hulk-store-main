@@ -1,0 +1,26 @@
+<mat-card>
+  <form (ngSubmit)="registerUser()" [formGroup]="profileForm" class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Employee Identification</mat-label>
+      <input #employeeId formControlName="employeeId" matInput maxlength="10" placeholder="Employee Identification">
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <mat-hint align="end">{{employeeId.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input #username formControlName="username" matInput placeholder="Username">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint align="end">{{username.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input #password formControlName="password" matInput placeholder="Password" type="password">
+      <mat-icon matSuffix>password</mat-icon>
+      <mat-hint align="end">{{password.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+
+    <button color="accent" mat-raised-button>Register</button>
+  </form>
+</mat-card>
